@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".WebViewActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:indeterminate="true"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_marginTop="10dp" />
+
+        <LinearLayout
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="2"
+                android:id="@+id/imageViewBackArrow"
+                android:src="@mipmap/arrow_back"
+               />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="5"
+                android:id="@+id/imageViewLogo"
+                android:src="@mipmap/facebook" />
+
+            <ImageView
+                android:layout_weight="2"
+                android:id="@+id/imageViewForwardArrow"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/arrow_forward" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

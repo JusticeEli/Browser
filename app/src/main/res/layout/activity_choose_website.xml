@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer"
+    tools:context=".ChooseWebsiteActivity"
+    android:background="@color/colorPrimaryLight">
+<RelativeLayout
+    android:background="@mipmap/background4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Choose Default Websites"
+        android:gravity="center_horizontal"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+    <EditText
+        android:textColor="@color/colorWhite"
+        android:layout_below="@+id/header"
+        android:layout_width="match_parent"
+        android:hint="Search"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchEdtTxt"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:background="@mipmap/background2"
+        android:layout_width="match_parent"
+        android:id="@+id/recyclerView"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchEdtTxt"
+        android:layout_marginTop="15dp"
+       />
+
+
+
+</RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:background="@mipmap/background3"
+        android:id="@+id/navigationView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:menu="@menu/side_bar_choose_website"
+        android:layout_gravity="start"
+        />
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

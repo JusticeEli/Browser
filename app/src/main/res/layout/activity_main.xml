@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/drawer"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+    <RelativeLayout
+        android:background="@mipmap/background4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:textColor="@color/colorWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="search"
+                android:id="@+id/searchEdtTxt"
+                android:gravity="center_horizontal"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:background="@mipmap/background1"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/recyclerView"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+
+        android:layout_height="match_parent"
+        android:background="@mipmap/background3"
+        android:id="@+id/navigationView"
+        app:menu="@menu/side_bar_main_activity"
+        android:layout_gravity="start"
+        />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
